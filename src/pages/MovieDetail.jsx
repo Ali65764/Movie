@@ -52,7 +52,7 @@ const MovieDetail = () => {
     <Layout>
       <div className="bg-white dark:bg-black flex justify-center items-center h-auto pt-7">
         {movieDetail && (
-          <div className="max-w-xs md:max-w-3xl w-full md:flex-row flex-col flex h-[80vh] mx-auto">
+          <div className="max-w-xs md:max-w-3xl w-full md:flex-row flex-col h-auto flex h-[80vh] mx-auto">
             <img src={movieDetail.Poster} alt={movieDetail.Title} className="h-full w-full md:w-1/2 object-cover" />
             <div className="text-[#daf2fe] dark:text-[#1f2937] bg-[#1f2937] dark:bg-[#e0f2fe] text-center text-xl w-full md:w-1/2 py-2 text-xl">
               <p className="text-[#fee2e2] md:text-3xl text-2xl dark:text-[#bc1a45]">{movieDetail.Title}</p>

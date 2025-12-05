@@ -67,7 +67,7 @@ const Home = () => {
     } finally {
       setLoading(false)
     }
-  },[fetchData,setMovies])
+  }, [fetchData, setMovies])
 
   useEffect(() => {
     handleSearch(searchTerm)
@@ -82,11 +82,10 @@ const Home = () => {
           <div className="px-4 lg:pl-48 md:pl-0 mb-10 group-hover:mb-20 trasnition-all duration-1000 md:w-[700px] lg:w-[910px] w-full">
             <p className="text-[#dbeafe] text-sm md:text-[17px] dark:text-[#bbf7d0]">Romantic , Drama , Action , Thriller , Horror</p>
             <p className="md:text-5xl text-2xl text-[#fecdd3] mb-2 dark:text-[#bfdbfe]">Join Us</p>
-            <p className="text-[#fecdd3] text-xs md:text-sm lg:text-base dark:text-[#bfdbfe]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at cumque maiores non consequatur veniam nesciunt mollitia!
-              Sapiente culpa deleniti quis quam nam voluptas id, accusamus iure quisquam, officiis debitis iusto earum laudantium alias
-              harum ad neque dolor ipsa non? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed hic culpa incidunt eveniet,
-              reiciendis aperiam nihil nulla veniam maxime mollitia expedita natus cupiditate accusamus voluptas quasi dolore soluta
-              consequuntur quaerat!</p>
+            <p className="text-[#fecdd3] text-xs md:text-sm lg:text-base dark:text-[#bfdbfe]">  Movies have the power to transport us to new worlds, to make us feel, dream, and imagine beyond the ordinary.
+              Every story on the screen holds a piece of humanity, a glimpse into different lives, and a spark of inspiration.
+              Through laughter, tears, and suspense, films connect us and remind us of the beauty, challenges, and magic of life.
+              Join us on this cinematic journey, where every frame tells a story, and every character leaves a lasting impression on your heart.</p>
           </div>
         </div>
       </article>
