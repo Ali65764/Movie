@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-scroll::-webkit-scrollbar{
+    width: 10px;
+}
+.custom-scroll::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 10px;
+}
+.dark .custom-scroll::-webkit-scrollbar-track {
+    background-color:black 
+}
+
+.animate-modal{
+    animation: modal 0.6s;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.dark body{
+    background-color: black;
+}
