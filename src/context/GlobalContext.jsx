@@ -30,9 +30,9 @@ const GlobalContextProvider = ({ children }) => {
         setShowModal(false)
     }
 
-    const saveToStorage = useCallback((items) => {
+    const saveToStorage = (items) => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
-    },[])
+    }
 
     useEffect(() => {
         const stored = localStorage.getItem(STORAGE_KEY)
@@ -41,7 +41,7 @@ const GlobalContextProvider = ({ children }) => {
         }
     }, [])
 
-    const addMovie = useCallback((movieId) => {
+    const addMovie = (movieId) => {
         const movie = movies.find((movie) => movie.imdbID === movieId)
         const movieInWatchList = watchList.find((movie) => movie.imdbID === movieId)
 
@@ -53,18 +53,18 @@ const GlobalContextProvider = ({ children }) => {
         setWatchList(updatedWatchList)
         toast.success("Movie added successfully", { autoClose: 1500 })
         saveToStorage(updatedWatchList)
-    },[movies,watchList,saveToStorage])
+    }
 
-    const deleteMovie = useCallback((movieId) => {
+    const deleteMovie = (movieId) => {
         const updatedWatchList = watchList.filter((movie) => movie.imdbID !== movieId)
         setWatchList(updatedWatchList)
         toast.success("Movie deleted successfully!", { autoClose: 1500 })
         saveToStorage(updatedWatchList)
-    }, [saveToStorage, setWatchList])
+    }
 
-    const isInMovie = useCallback((movieId) => {
+    const isInMovie = (movieId) => {
         return watchList.find((movie) => movie.imdbID === movieId)
-    }, [watchList])
+    }
 
     const contextValue = {
         movies, setMovies, addMovie, isInMovie, watchList, deleteMovie, loading, setLoading, error, setError, handleShowModal,

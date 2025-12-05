@@ -43,7 +43,7 @@ const NavBar = () => {
                 </div>
 
                 <button onClick={toggleMenu} className="md:hidden flex">
-                    <GiHamburgerMenu className="text-4xl text-red-600" />
+                    <GiHamburgerMenu className="text-4xl text-red-600 dark:text-blue-500" />
                 </button>
 
                 <div className="text-red-600" onClick={toggleTheme}>
